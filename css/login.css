@@ -1,0 +1,91 @@
+/* css/index.css */
+.login-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    
+    /* "Patrón de fondo... transparencia: 23" */
+    background-image: radial-gradient(var(--color-fill) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: rgba(255, 255, 255, 0.77);
+}
+
+.login-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid var(--color-fill);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+/* "Cajita para insertar nombres" */
+input[type="text"]{
+    background-color: var(--color-fill);
+    border: none;
+    border-radius: 38px;
+    padding: 15px 25px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    color: black;
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #e3d390;
+}
+
+button {
+    margin-top: 1rem;
+    background-color: var(--color-title);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 38px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #b5620e;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.login-footer {
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+small {
+    font-family: var(--font-main);
+    font-style: italic;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,68 @@
+/* css/greca.css */
+:root {
+    /* Colors */
+    --color-title: #CD7316;         /* Orange/Rust for titles and frames */
+    --color-fill: #d6c683;          /* Beige/Gold for input boxes */
+    --color-text: #000000;          /* Black text */
+    
+    /* Typography */
+    /* Using Merriweather as a fallback for ITC Benguiat */
+    --font-main: 'ITC Benguiat', 'Merriweather', serif; 
+    --font-accent: 'Anton', sans-serif;
+    
+    /* Sizes */
+    --size-title-main: 3.2rem;
+    --size-title-page: 4rem;
+    --size-body: 1.1rem;
+    --size-name: 1.75rem;
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    font-size: var(--size-body);
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    /* Simulating the "Patrón de marco" (Frame Pattern) */
+    border: 15px solid var(--color-title); 
+}
+
+h1, h2, h3 {
+    font-family: var(--font-main);
+    color: var(--color-title);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* "EFECTO: ELEVADO (LIFT)" */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    font-size: var(--size-title-main);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-title);
+}

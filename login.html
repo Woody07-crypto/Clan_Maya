@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Clan Maya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/greca.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div>
+        <nav>
+            <div class="nav-container">
+                <div class="name-site">
+                    <h1>Clan Maya</h1>
+                </div>
+                <div class="logo-site">
+                    <img src="img/logo_clan-maya_rgb-trasparente.png" alt="Clan Maya Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">¿Qué es ser un rover?</a>
+                    <a href="checklist.html">Primer paso</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="login-wrapper">
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form action="/submit_login" method="post">
+                <label for="username">Nombre Totem:</label>
+                <input type="text" id="username" name="username" required>
+
+                <button type="submit">Ingresar</button>
+            </form>
+            <div class="login-footer">
+                <small>¿Nuevo rover?</small>
+                <a href="register.html">Regístrate aquí</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
