@@ -1,55 +1,96 @@
-/* css/nav.css */
-nav {
-    background-color: #fdfdfd;
-    padding: 1rem 2rem;
-    border-bottom: 2px solid var(--color-title);
+/* css/modern_style.css */
+
+/* --- VARIABLES CSS --- */
+:root {
+    --primary: #CD7316;         /* Naranja Clan Maya */
+    --secondary: #d6c683;       /* Beige/Dorado */
+    --dark: #1a1a1a;            /* Negro moderno */
+    --light: #f8f9fa;           /* Fondo claro */
+    --white: #ffffff;
+    
+    /* Tipografías */
+    --font-heading: 'Anton', sans-serif;
+    --font-body: 'Merriweather', serif;
+    --font-ui: 'Montserrat', sans-serif; /* Para UI elements */
+    
+    /* Efectos */
+    --radius-card: 20px;
+    --radius-btn: 50px;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --shadow-hover: 0 15px 40px rgba(205, 115, 22, 0.2);
 }
 
-.nav-container {
+/* --- BASE --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark);
+    background-color: var(--light);
+    line-height: 1.7;
+    border-top: 10px solid var(--primary); /* Toque de color superior */
+}
+
+a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+ul { list-style: none; }
+
+/* --- NAV --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 1rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
 }
 
-.logo-site img {
-    max-height: 80px;
+.logo-area { display: flex; align-items: center; gap: 15px; }
+.logo-area img { height: 50px; }
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--primary);
+    text-transform: uppercase;
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
-    font-family: var(--font-accent);
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-}
+.nav-links { display: flex; gap: 50px; align-items: center; justify-content: space-evenly; }
 
-.nav-links a {
+
+
+
+
+.nav-link {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-btn);
     position: relative;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--color-title);
-    transition: width 0.3s;
+.nav-link:hover { 
+    background: #b5620e;
+    box-shadow: 0 5px 15px rgba(205, 115, 22, 0.3);
+    transform: translateY(-2px);
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.btn-login {
+    background: var(--primary);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-btn);
+    font-family: var(--font-ui);
+    font-weight: 600;
 }
 
-/* Mobile Nav */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        text-align: center;
-    }
+.btn-login:hover {
+    background: #b5620e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(205, 115, 22, 0.3);
 }

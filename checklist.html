@@ -1,11 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer paso</title>
+    <title>Checklist - Inicialización | Clan Maya</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/greca.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/checklist.css">
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="logo-area">
+            <img src="img/logo_clan-maya_rgb-trasparente.png" alt="Clan Maya">
+            <span class="brand-name">Clan Maya</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="etapas.html" class="nav-link">Progresión</a></li>
+            <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+            <li><a href="guia_piloto.html" class="nav-link">Quiero pilotar una reunión</a></li>
+        </ul>
+        <a href="login.html" class="btn-login">Ingresar</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="checklist-hero">
+        <div class="hero-content-checklist">
+            <h1 class="hero-title-checklist" id="checklist-h1">
+                <i class="fas fa-clipboard-check" ></i>
+                Checklist de Inicialización
+            </h1>
+            <p class="hero-subtitle-checklist">Antes de comenzar tu aventura Rover, asegúrate de completar estos pasos</p>
+        </div>
+    </section>
+
+    <!-- Checklist Container -->
+    <main class="checklist-container">
+        <div class="checklist-card">
+            <div class="checklist-header">
+                <h2>Preparación Inicial</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="progress-text">
+                    <span id="completedCount">0</span> de <span id="totalCount">8</span> completados
+                </p>
+            </div>
+
+            <form class="checklist-form" id="checklistForm">
+                <div class="checklist-item">
+                    <input type="checkbox" id="item1" name="item1" class="checklist-checkbox">
+                    <label for="item1" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Tener cuenta y acceso a Rover Cloud (Google Drive)</span>
+                            <i class="fas fa-cloud check-item-icon"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item2" name="item2" class="checklist-checkbox">
+                    <label for="item2" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Estar en los grupos de WhatsApp del Clan</span>
+                            <i class="fab fa-whatsapp check-item-icon"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item3" name="item3" class="checklist-checkbox">
+                    <label for="item3" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Elegir tu nombre tótem</span>
+                            <i class="fas fa-user-circle check-item-icon"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item4" name="item4" class="checklist-checkbox">
+                    <label for="item4" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Completar cursos: Safe from Harm + Crecer Juntos</span>
+                            <i class="fas fa-graduation-cap check-item-icon"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item5" name="item5" class="checklist-checkbox">
+                    <label for="item5" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Tomar un rol en el Clan (Tesorero, Secretario, etc.)</span>
+                            <i class="fas fa-users check-item-icon"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item6" name="item6" class="checklist-checkbox">
+                    <label for="item6" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Conseguir tu padrino</span>
+                            <i class="fas fa-handshake check-item-icon"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item7" name="item7" class="checklist-checkbox">
+                    <label for="item7" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Conocer la historia del Escultismo y Roverismo</span>
+                            <i class="fas fa-book check-item-icon"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item8" name="item8" class="checklist-checkbox">
+                    <label for="item8" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Conocer historia salvadoreña, símbolos patrios y honores a la bandera</span>
+                            <i class="fas fa-flag check-item-icon"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item9" name="item9" class="checklist-checkbox">
+                    <label for="item9" class="checklist-label">
+                        <div class="check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="check-content">
+                            <span class="check-text">Haber sido piloto de una reunion ordinaria de sabado
+                                <small>(Puedes encontrar una guia aquí: <a href="guia_piloto.html">Guia Piloto)</a></small>
+                            </span>
+                            <i class="fas fa-clock check-item-icon"></i>
+                        </div>
+                        
+                    </label>
+                </div>
+            </form>
+
+            <div class="checklist-footer">
+                <button type="button" class="btn-save" id="saveBtn">
+                    <i class="fas fa-save"></i>
+                    Guardar Progreso
+                </button>
+                <div class="completion-message" id="completionMessage">
+                    <i class="fas fa-trophy"></i>
+                    <span>¡Felicidades! Has completado todos los pasos iniciales</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/checklist.js"></script>
 </body>
 </html>

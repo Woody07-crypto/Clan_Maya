@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Clan Maya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/greca.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div>
+        <nav>
+            <div class="nav-container">
+                <div class="name-site">
+                    <h1>Clan Maya</h1>
+                </div>
+                <div class="logo-site">
+                    <img src="img/logo_clan-maya_rgb-trasparente.png" alt="Clan Maya Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="login.html">Regresar a Inicio</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="register-wrapper">
+        <div class="register-container">
+            <h2>Registro de Nuevo Rover</h2>
+            <form action="/submit_register" method="post">
+                <label for="totem-name">Nombre Tótem:</label>
+                <input type="text" id="totem-name" name="totem-name" required>
+                <small class="totem-note">
+                    <i class="fas fa-info-circle"></i>
+                    El nombre tótem debe ser maya con significado maya
+                </small>
+
+                <label for="totem-meaning">Significado del Nombre Tótem:</label>
+                <textarea id="totem-meaning" name="totem-meaning" rows="4" required></textarea>
+                <small class="totem-note">
+                    <i class="fas fa-info-circle"></i>
+                    Explica el significado maya de tu nombre tótem
+                </small>
+
+                <button type="submit">Registrarse</button>
+            </form>
+            <div class="register-footer">
+                <small>¿Ya tienes cuenta?</small>
+                <a href="login.html">Inicia sesión aquí</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>
+
+</html>

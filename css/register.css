@@ -1,5 +1,6 @@
-/* css/index.css */
-/* css/nav.css */
+/* css/register.css */
+
+/* --- NAV STYLES --- */
 nav {
     background-color: #fdfdfd;
     padding: 1rem 2rem;
@@ -16,6 +17,14 @@ nav {
     gap: 1rem;
 }
 
+.name-site h1 {
+    font-family: var(--font-accent);
+    font-size: 2rem;
+    color: var(--color-title);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .logo-site img {
     max-height: 80px;
 }
@@ -30,6 +39,8 @@ nav {
 
 .nav-links a {
     position: relative;
+    color: var(--color-text);
+    transition: color 0.3s;
 }
 
 .nav-links a::after {
@@ -41,6 +52,10 @@ nav {
     left: 0;
     background-color: var(--color-title);
     transition: width 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-title);
 }
 
 .nav-links a:hover::after {
@@ -55,9 +70,7 @@ nav {
     }
 }
 
-
-
-.login-wrapper {
+.register-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -70,14 +83,24 @@ nav {
     background-color: rgba(255, 255, 255, 0.77);
 }
 
-.login-container {
+.register-container {
     background: white;
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     border: 2px solid var(--color-fill);
+}
+
+.register-container h2 {
+    font-family: var(--font-accent);
+    font-size: 2rem;
+    color: var(--color-title);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 form {
@@ -90,10 +113,12 @@ label {
     font-family: var(--font-accent);
     font-size: 1.2rem;
     color: var(--color-text);
+    margin-top: 0.5rem;
 }
 
 /* "Cajita para insertar nombres" */
-input[type="text"]{
+input[type="text"],
+textarea {
     background-color: var(--color-fill);
     border: none;
     border-radius: 38px;
@@ -103,12 +128,37 @@ input[type="text"]{
     color: black;
     outline: none;
     transition: transform 0.2s, box-shadow 0.2s;
+    resize: vertical;
 }
 
-input[type="text"]:focus {
+textarea {
+    border-radius: 20px;
+    min-height: 100px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: #e3d390;
+}
+
+.totem-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-main);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 5px;
+}
+
+.totem-note i {
+    color: var(--color-title);
+    font-size: 0.9rem;
 }
 
 button {
@@ -134,7 +184,7 @@ button:active {
     transform: scale(0.98);
 }
 
-.login-footer {
+.register-footer {
     margin-top: 2rem;
     text-align: center;
     display: flex;
@@ -142,8 +192,45 @@ button:active {
     gap: 0.5rem;
 }
 
-small {
+.register-footer small {
     font-family: var(--font-main);
     font-style: italic;
     font-size: 0.9rem;
 }
+
+.register-footer a {
+    color: var(--color-title);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.register-footer a:hover {
+    color: #b5620e;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .register-wrapper {
+        padding: 2rem 1rem;
+    }
+    
+    .register-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .register-container h2 {
+        font-size: 1.6rem;
+    }
+    
+    label {
+        font-size: 1rem;
+    }
+    
+    input[type="text"],
+    textarea {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+

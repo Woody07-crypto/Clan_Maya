@@ -1,6 +1,3 @@
-/* css/modern_style.css */
-
-/* --- VARIABLES CSS --- */
 :root {
     --primary: #CD7316;         /* Naranja Clan Maya */
     --secondary: #d6c683;       /* Beige/Dorado */
@@ -19,71 +16,6 @@
     --shadow: 0 10px 30px rgba(0,0,0,0.08);
     --shadow-hover: 0 15px 40px rgba(205, 115, 22, 0.2);
 }
-
-/* --- BASE --- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-    font-family: var(--font-body);
-    color: var(--dark);
-    background-color: var(--light);
-    line-height: 1.7;
-    border-top: 10px solid var(--primary); /* Toque de color superior */
-}
-
-a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-ul { list-style: none; }
-
-/* --- NAV --- */
-.navbar {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 1rem 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-}
-
-.logo-area { display: flex; align-items: center; gap: 15px; }
-.logo-area img { height: 50px; }
-
-.brand-name {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: var(--primary);
-    text-transform: uppercase;
-}
-
-.nav-links { display: flex; gap: 30px; }
-
-.nav-link {
-    font-family: var(--font-ui);
-    font-weight: 600;
-    color: var(--dark);
-    position: relative;
-}
-
-.nav-link:hover { color: var(--primary); }
-
-.btn-login {
-    background: var(--primary);
-    color: white;
-    padding: 0.6rem 1.5rem;
-    border-radius: var(--radius-btn);
-    font-family: var(--font-ui);
-    font-weight: 600;
-}
-
-.btn-login:hover {
-    background: #b5620e;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(205, 115, 22, 0.3);
-}
-
 /* --- HERO --- */
 .hero {
     padding: 6rem 5% 4rem;
@@ -119,7 +51,7 @@ ul { list-style: none; }
     max-width: 400px;
     margin: 0 auto;
 }
-.hero-card h3 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 0.5rem; }
+.hero-card h3 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 0.5rem; color: var(--white);}
 
 /* --- SECCIONES Y TARJETAS --- */
 .section-padding { padding: 5rem 5%; }
@@ -235,7 +167,8 @@ ul { list-style: none; }
     
     .hero-card { transform: rotate(0); }
     .hero-content h1 { font-size: 3.5rem; }
-    .nav-links { display: none; }
+    .nav-links { display: row; }
+    .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
     .campos-grid { grid-template-columns: 1fr; }
     .campo-box { flex-direction: column; }
     .campo-header { min-width: 100%; padding: 1rem; flex-direction: row; gap: 10px; }

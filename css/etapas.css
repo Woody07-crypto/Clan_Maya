@@ -1,4 +1,21 @@
-/* css/etapas.css - Modern UI for Las 5 Etapas */
+:root {
+    --primary: #CD7316;         /* Naranja Clan Maya */
+    --secondary: #d6c683;       /* Beige/Dorado */
+    --dark: #1a1a1a;            /* Negro moderno */
+    --light: #f8f9fa;           /* Fondo claro */
+    --white: #ffffff;
+    
+    /* Tipografías */
+    --font-heading: 'Anton', sans-serif;
+    --font-body: 'Merriweather', serif;
+    --font-ui: 'Montserrat', sans-serif; /* Para UI elements */
+    
+    /* Efectos */
+    --radius-card: 20px;
+    --radius-btn: 50px;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --shadow-hover: 0 15px 40px rgba(205, 115, 22, 0.2);
+}
 
 /* --- HERO SECTION --- */
 .etapas-hero {
@@ -30,12 +47,14 @@
 
 .hero-title-etapas {
     font-family: var(--font-heading);
+    color: var(--white);
     font-size: 5rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-shadow: 0 4px 20px rgba(0,0,0,0.3);
     letter-spacing: 3px;
 }
+
 
 .hero-subtitle {
     font-family: var(--font-ui);
